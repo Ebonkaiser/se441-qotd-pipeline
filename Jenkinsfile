@@ -7,7 +7,6 @@ node {
   def gradleHome = tool 'Grade 2.11'
   bat "${gradleHome}\\bin\\gradle.bat assemble uploadArchives
   
-  step([$class: 'ArtifactArchiver', artifacts: '**/*.war',
-  fingerprint: true])
+  step([$class: 'ArtifactArchiver', artifacts: '**/*.war', fingerprint: true])
 }
 
