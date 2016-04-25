@@ -2,7 +2,7 @@ stage "DEV-QA"
 
 node {
   // all pipeline code runs on a node
-  git 'https://github.com/Ebonkaiser/se441-qotd-pipeline.git'
+  git 'https://github.com/Ebonkaiser/se441-qotd.git'
   
   def gradleHome = tool 'Grade 2.11'
   bat "${gradleHome}\\bin\\gradle.bat assemble uploadArchives
